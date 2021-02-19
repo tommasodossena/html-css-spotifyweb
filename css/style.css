@@ -15,6 +15,7 @@ ul, li {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    color: #fff;
 }
 h3 {
     font-size: 12px;
@@ -24,10 +25,25 @@ p, a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
+    color: #6d6d6d;
 }
 a {
     text-decoration: none;
-    color: #6d6d6d;
+}
+
+/* BUTTONS */
+
+/* MIX */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.text_uppercase {
+    text-transform: uppercase;
+}
+.white {
+    color: #fff;
 }
 
 /* STRUCTURE */
@@ -38,7 +54,6 @@ body {
 main {
     height: calc(100% - 75px);
     display: flex;
-    overflow: auto;
 }
 footer {
     height: 75px;
@@ -51,48 +66,63 @@ aside {
     width: 225px;
     height: 100%;
     background-color: #121111;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
 }
 aside a {
     display: flex;
     align-items: center;
     font-weight: 600;
 }
+.aside__top {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 .aside__logo {
     height: 75px;
-    padding-top: 15px;
+    line-height: 75px;
     padding-left: 15px;
+    flex-shrink: 0;
 }
 .aside__logo img {
-    height: 75%;
+    height: 35px;
+    vertical-align: middle;
+}
+.aside__icon {
+    padding-right: 10px;
 }
 .aside__nav li {
     padding-bottom: 5px;
     padding-left: 15px;
     border-left: 2px solid transparent;
 }
-.aside__nav li:hover {
-    border-left: 2px solid #1db954;
-}
-.aside__icon {
-    padding-right: 10px;
+.aside__playlist, .aside__bottom {
+    padding: 10px 15px;
 }
 .aside__playlist {
-    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
-.aside__playlist {
-    text-transform: uppercase;
+.aside__playlist button {
+    background-color: transparent;
+    border: none;
+    color: #6d6d6d;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.aside__playlist ul {
+    display: block;
+    overflow-y: auto;
+    flex-basis: 400px;
+    width: 100%;
 }
 .aside__playlist li {
     padding: 10px 0;
-}
-.aside__user {
-    position: fixed;
-    bottom: 75px;
-    width: 225px;
-    color: #fff;
-    padding: 5px 15px;
-    background-color: #121111;
 }
 .user__icon {
     border-radius: 50%;
@@ -119,3 +149,66 @@ aside a {
     height: calc(100% - 75px);
     margin-top: 75px;
 }
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__left {
+    display: inline-flex; 
+    flex-basis: 225px;
+    padding: 0 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__left__track {
+    display: inline-flex;
+    align-items: center;
+}
+.footer__left__track > * {
+    display: inline-block;
+}
+.footer__center {
+    flex-basis: 25%;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer__center__controls {
+    flex-basis: 50%;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__center__progress {
+    flex-basis: 90%;
+    position: relative;
+    height: 3px;
+    margin: 15px 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.played {
+    width: 20%;
+    height: 3px;
+    position: absolute;
+    background-color: #b3b2b2;
+}
+.footer__right {
+    flex-basis: 225px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__right__volume {
+    position: relative;
+    height: 3px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+}
+

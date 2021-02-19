@@ -21,51 +21,60 @@
 <body>
     <!-- Main -->
     <main>
+        <!-- Aside  -->
         <aside>
-            <div class="aside__logo">
-                <img src="img/Spotify_Logo_RGB_White.png" alt="Spotify logo">
+            <div class="aside__top">
+                <!-- Aside logo -->
+                <div class="aside__logo">
+                    <img src="img/Spotify_Logo_RGB_White.png" alt="Spotify logo">
+                </div>
+                <!-- Aside logo -->
+                <!-- Aside navigation -->
+                <div class="aside__nav">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img class="aside__icon" src="http://via.placeholder.com/30" alt="Home icon">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img class="aside__icon" src="http://via.placeholder.com/30" alt="Home icon">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img class="aside__icon" src="http://via.placeholder.com/30" alt="Home icon">
+                                    Home
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>      
+                </div>
+                <!-- /Aside navigation -->
+                <!-- Aside playlist -->
+                <div class="aside__playlist">
+                    <h3 class="text_uppercase">Playlist</h3>
+                    <button>
+                        <img class="aside__icon" src="http://via.placeholder.com/45" alt="#">
+                        Create Playlist
+                    </button> 
+                    <ul>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                    </ul>
+                </div>
+                <!-- Aside playlist -->
             </div>
-            <nav class="aside__nav">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img class="aside__icon" src="http://via.placeholder.com/30" alt="Home icon">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="aside__icon" src="http://via.placeholder.com/30" alt="Home icon">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img class="aside__icon" src="http://via.placeholder.com/30" alt="Home icon">
-                            Home
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="aside__playlist">
-                <h3>Playlist</h3>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img class="aside__icon" src="http://via.placeholder.com/45" alt="#">
-                            Create Playlist
-                        </a>
-                    </li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                    <li><a href="#">Nome Playlist</a></li>
-                </ul>
-            </nav>
-            <div class="aside__user">
+            <div class="aside__bottom">
                 <a href="#">
                     <i class="far fa-arrow-alt-circle-down"></i>
                     Installa app
@@ -77,14 +86,56 @@
                 </a>
             </div>
         </aside>
+        <!-- /Aside  -->
+        <!-- Main container  -->
         <div id="main__container">
             <div id="upgrade"></div>
             <div id="library"></div>    
         </div>
+        <!-- /Main container  -->
     </main>
     <!-- /Main -->
     <!-- Footer -->
     <footer>
+        <!-- Footer left -->
+        <div class="footer__left">
+            <div class="footer__left__track">
+                <img src="http://via.placeholder.com/45" alt="placeholder">
+                <div class="footer__left__info">
+                    <h6>Artist</h6>
+                    <p>Track</p>
+                </div>
+            </div>
+            <div class="footer__left__buttons white">
+                <i class="fa fa-heart"></i>
+                <i class="fas fa-ban"></i>
+            </div>
+        </div>
+        <!-- /Footer left -->
+        <!-- Footer center -->
+        <div class="footer__center">
+            <div class="footer__center__controls white">
+                <i class="fas fa-random fa-lg"></i>
+                <i class="fas fa-step-backward fa-lg"></i>
+                <i class="far fa-play-circle fa-2x"></i>
+                <i class="fas fa-step-forward fa-lg"></i>
+                <i class="fas fa-undo-alt fa-lg"></i>
+            </div>
+            <div class="footer__center__progress">
+                <div class="played"></div>
+            </div>
+        </div>
+        <!-- Footer /center -->
+        <!-- Footer right -->
+        <div class="footer__right white">
+            <i class="fas fa-list"></i>
+            <i class="fas fa-desktop"></i>
+            <i class="fas fa-volume-off"></i>
+            <div class="footer__right__volume">
+                <div class="played"></div>
+            </div>
+        </div>
+        <!-- Footer /right -->
     </footer>
     <!-- /Footer -->
 </body>

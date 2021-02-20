@@ -26,7 +26,8 @@
             <div class="aside__top">
                 <!-- Aside logo -->
                 <div class="aside__logo">
-                    <img src="img/Spotify_Logo_RGB_White.png" alt="Spotify logo">
+                    <img src="img/Spotify_Logo_RGB_White.png" alt="Spotify logo" class="aside__logo__full">
+                    <img src="img/Spotify_Icon_RGB_White.png" alt="Spotify logo" class="aside__logo__small hidden">
                 </div>
                 <!-- Aside logo -->
                 <!-- Aside navigation -->
@@ -36,19 +37,19 @@
                             <li>
                                 <a href="#">
                                     <img class="aside__icon" src="http://via.placeholder.com/30" alt="Home icon">
-                                    Home
+                                    <p class="white">Home</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img class="aside__icon" src="http://via.placeholder.com/30" alt="Home icon">
-                                    Home
+                                    <p>Home</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img class="aside__icon" src="http://via.placeholder.com/30" alt="Home icon">
-                                    Home
+                                    <p>Home</p>
                                 </a>
                             </li>
                         </ul>
@@ -60,7 +61,7 @@
                     <h3 class="text_uppercase">Playlist</h3>
                     <button>
                         <img class="aside__icon" src="http://via.placeholder.com/45" alt="#">
-                        Create Playlist
+                        <p>Create Playlist</p>
                     </button> 
                     <ul>
                         <li><a href="#">Nome Playlist</a></li>
@@ -77,11 +78,11 @@
             <div class="aside__bottom">
                 <a href="#">
                     <i class="far fa-arrow-alt-circle-down"></i>
-                    Installa app
+                    <p>Installa app</p>
                 </a>
                 <hr>
                 <a href="#">
-                    <img class="user__icon" src="http://via.placeholder.com/25" alt="User icon">
+                    <img class="user__icon" src="http://via.placeholder.com/35" alt="User icon">
                     <h3>John Doe</h3>
                 </a>
             </div>
@@ -89,8 +90,169 @@
         <!-- /Aside  -->
         <!-- Main container  -->
         <div id="main__container">
-            <div id="upgrade"></div>
-            <div id="library"></div>    
+            <div id="upgrade">
+                <a class="btn btn--upgrade text_uppercase" href="#" target="_blank">Effettua L'upgrade</a>
+            </div>
+            <div id="library">
+                <section id="library__category">
+                    <nav>
+                        <ul class="text_uppercase list_inline">
+                            <li><a class="active white"href="#">In evidenza</a></li>
+                            <li><a href="#">Podcast</a></li>
+                            <li><a href="#">Classifiche</a></li>
+                            <li><a href="#">Generi e Mood</a></li>
+                            <li><a href="#">Nuove uscite</a></li>
+                            <li><a href="#">Scopri</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="library__section" id="library__recent">
+                    <h2>Recently played</h2>
+                    <hr>
+                    <div class="library__section__list">
+                        <ul class="list_inline">
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="library__section" id="library__suggested">
+                    <h2>Creato per John Doe</h2>
+                    <p class="p--subtitle">Più ascolti, più accurati saranno i tuoi suggerimenti</p>
+                    <hr>
+                    <div class="library__section__list">
+                        <ul class="list_inline">
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="library__section" id="library__artist">
+                    <h2>Artisti più popolari</h2>
+                    <p class="p--subtitle">Più ascolti, più accurati saranno i tuoi suggerimenti</p>
+                    <hr>
+                    <div class="library__section__list">
+                        <ul class="list_inline">
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                            <li>
+                                <a class="a--cover" href="#">
+                                    <img src="https://via.placeholder.com/150" alt="">
+                                    <div class="a--cover__overlay hidden center">
+                                        <i class="far fa-heart white"></i>
+                                        <i class="fas fa-play white"></i>
+                                        <i class="fas fa-ellipsis-h white"></i>
+                                    </div>
+                                </a>
+                                <a class="a--title" href="#">Track title</a>
+                                <p class="p--subtitle center">Subtitle</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>    
         </div>
         <!-- /Main container  -->
     </main>
@@ -122,12 +284,16 @@
                 <i class="fas fa-undo-alt fa-lg"></i>
             </div>
             <div class="footer__center__progress">
-                <div class="played"></div>
+                <small>00:00</small>
+                <div class="progress__bar">
+                    <div class="progress__bar__played"></div>
+                </div>  
+                <small>00:00</small>
             </div>
         </div>
         <!-- Footer /center -->
         <!-- Footer right -->
-        <div class="footer__right white">
+        <div class="footer__right">
             <i class="fas fa-list"></i>
             <i class="fas fa-desktop"></i>
             <i class="fas fa-volume-off"></i>

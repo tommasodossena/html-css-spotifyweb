@@ -17,11 +17,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: #fff;
 }
+h2 {
+    font-size: 20px;
+}
 h3 {
     font-size: 12px;
     color: #fff;
 }
 p, a {
+    font-size: 11px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
@@ -30,14 +34,45 @@ p, a {
 a {
     text-decoration: none;
 }
+hr {
+    border: none;
+    border-bottom: 1px solid #464646;
+    margin: 3px 0;
+}
 
 /* BUTTONS */
+.btn {
+    padding: 5px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+.btn--upgrade {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 10px;
+    margin: 20px 0;
+    transition: 0.1s ease-in-out;
+}
+.btn--upgrade:hover {
+    transform: scale(1.1);
+}
 
 /* MIX */
 .clearfix::after {
     content: "";
     display: block;
     clear: both;
+}
+.hidden {
+    display: none;
+}
+.center {
+    text-align: center;
+}
+.list_inline li{
+    display: inline-block;
 }
 .text_uppercase {
     text-transform: uppercase;
@@ -74,7 +109,13 @@ aside {
 aside a {
     display: flex;
     align-items: center;
-    font-weight: 600;
+    transition: 0.1s ease-out;
+}
+aside a, aside p {
+    font-weight: 500;
+}
+aside a:hover, aside p:hover {
+    color: #fff;
 }
 .aside__top {
     display: flex;
@@ -84,12 +125,12 @@ aside a {
 .aside__logo {
     height: 75px;
     line-height: 75px;
-    padding-left: 15px;
     flex-shrink: 0;
 }
 .aside__logo img {
     height: 35px;
     vertical-align: middle;
+    padding-left: 15px;
 }
 .aside__icon {
     padding-right: 10px;
@@ -98,6 +139,9 @@ aside a {
     padding-bottom: 5px;
     padding-left: 15px;
     border-left: 2px solid transparent;
+}
+.aside__nav li:first-child {
+    border-left: 2px solid #1eb853;
 }
 .aside__playlist, .aside__bottom {
     padding: 10px 15px;
@@ -124,30 +168,124 @@ aside a {
 .aside__playlist li {
     padding: 10px 0;
 }
+.aside__bottom hr {
+    margin: 10px 0;
+}
 .user__icon {
     border-radius: 50%;
     margin-right: 10px;
-    margin-top: 10px;
 }
 
 /* main container */
 #main__container {
     width: calc(100% - 225px);
+    padding: 15px;
+    overflow-y: auto;
 }
 
 /* upgrade */
 #upgrade {
     height: 75px;
-    width: 100%;
     position: fixed;
-    background-color: #080B13;
-    opacity: 0.5;
+    top: 0;
+    right: 0;
+    left: 225px;
+    background-color: rgb(8, 11, 19, 0.5);
+    text-align: right;
+    padding-right: 30px;
 }
 
 /* library */
 #library {
     height: calc(100% - 75px);
     margin-top: 75px;
+}
+#library__category {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#library__category li {
+    margin: 0px 8px 24px;
+}
+#library__category a {
+    font-size: 11px;
+    font-weight: 600;
+    position: relative;
+}
+#library__category a.active::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    transform: translate(50%, 0);
+    height: 1px;
+    width: 20px;
+    border-bottom: 2px solid #1eb853;
+}
+.library__section {
+    max-width: 941px;
+    margin: 0 auto 35px;
+}
+.library__section h2 {
+    margin-bottom: 10px;
+}
+.library__section__list {
+    padding: 20px 0;
+}
+.library__section__list li:not(:last-child){
+    margin-right: 5px;
+}
+.a--cover {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    position: relative;
+}
+.a--cover:hover .a--cover__overlay {
+    display: inline-block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.a--cover .fa-heart, .a--cover .fa-ellipsis-h {
+    font-size: 14px;
+}
+.a--cover .fa-play {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 13px 0;
+    padding-right: 12px;
+    padding-left: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    font-size: 14px;
+    margin: 0 10px;
+    transition: 0.1s ease-in-out;
+}
+.a--cover .fa-play:hover {
+    border: 1px solid rgba(255, 255, 255);
+    transform: scale(1.1);
+}
+.a--title {
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    margin: 5px 0;
+}
+.p--subtitle {
+    font-size: 10px;
+    font-weight: 600;
+}
+#library__artist .a--cover {
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 /* FOOTER */
@@ -170,38 +308,55 @@ footer {
 .footer__left__track > * {
     display: inline-block;
 }
+.footer__left__info {
+    padding-left: 10px;
+}
 .footer__center {
-    flex-basis: 25%;
-    display: inline-flex;
+    flex-basis: 35%;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 .footer__center__controls {
-    flex-basis: 50%;
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
+    width: 100%;
+    line-height: 24px;
+    text-align: center;
+}
+.footer__center__controls *{
+    vertical-align: middle;
+    margin: 0 10px;
 }
 .footer__center__progress {
-    flex-basis: 90%;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.progress__bar {
+    flex-basis: 80%;
     position: relative;
     height: 3px;
-    margin: 15px 10px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 20px;
+    margin: 15px 10px;
     overflow: hidden;
 }
-.played {
+.progress__bar__played {
     width: 20%;
     height: 3px;
     position: absolute;
     background-color: #b3b2b2;
+}
+.footer__center__progress small {
+    flex-basis: 5%;
 }
 .footer__right {
     flex-basis: 225px;
     display: inline-flex;
     justify-content: space-around;
     align-items: center;
+    color: #fff;
 }
 .footer__right__volume {
     position: relative;
@@ -212,3 +367,24 @@ footer {
     overflow: hidden;
 }
 
+/* RESPONSIVE  */
+@media screen and (max-width: 768px) {
+    .footer__left, .footer__right {
+        flex-basis: 25%;
+    }
+    .footer__center {
+        flex-basis: 50%;
+    }
+}
+@media screen and (max-width: 576px) {
+    aside {
+        width: 65px;
+    }
+    .aside__logo__small {
+        display: inline-block;
+        height: 25px;
+    }
+    .aside__logo__full, .aside__playlist, .aside__nav p, .aside__bottom p, .aside__bottom h3 {
+        display: none;
+    }
+}

@@ -77,13 +77,13 @@
             </div>
             <div class="aside__bottom">
                 <a href="#">
-                    <i class="far fa-arrow-alt-circle-down"></i>
+                    <i class="far fa-arrow-alt-circle-down fa-lg"></i>
                     <p>Installa app</p>
                 </a>
                 <hr>
                 <a href="#">
                     <img class="user__icon" src="http://via.placeholder.com/35" alt="User icon">
-                    <h3>John Doe</h3>
+                    <h3>Tommaso Dossena</h3>
                 </a>
             </div>
         </aside>
@@ -91,13 +91,13 @@
         <!-- Main container  -->
         <div id="main__container">
             <div id="upgrade">
-                <a class="btn btn--upgrade text_uppercase" href="#" target="_blank">Effettua L'upgrade</a>
+                <a class="btn btn--upgrade text_uppercase" href="#">Effettua L'upgrade</a>
             </div>
             <div id="library">
                 <section id="library__category">
                     <nav>
                         <ul class="text_uppercase list_inline">
-                            <li><a class="active white"href="#">In evidenza</a></li>
+                            <li><a class="active white" href="#">In evidenza</a></li>
                             <li><a href="#">Podcast</a></li>
                             <li><a href="#">Classifiche</a></li>
                             <li><a href="#">Generi e Mood</a></li>
@@ -187,7 +187,7 @@
                     </div>
                 </section>
                 <section class="library__section" id="library__suggested">
-                    <h2>Creato per John Doe</h2>
+                    <h2>Creato per Tommaso Dossena</h2>
                     <p class="p--subtitle">Più ascolti, più accurati saranno i tuoi suggerimenti</p>
                     <hr>
                     <div class="library__section__list">
@@ -263,32 +263,35 @@
         <div class="footer__left">
             <div class="footer__left__track">
                 <img src="http://via.placeholder.com/45" alt="placeholder">
-                <div class="footer__left__info">
-                    <h6>Artist</h6>
-                    <p>Track</p>
-                </div>
             </div>
-            <div class="footer__left__buttons white">
-                <i class="fa fa-heart"></i>
-                <i class="fas fa-ban"></i>
+            <div class="footer__left__info">
+                <h6>Artist</h6>
+                <p>Track name</p>
+            </div>
+            <div class="footer__left__buttons">
+                <i class="far fa-heart"></i>
+                <i class="far fa-folder"></i>
             </div>
         </div>
         <!-- /Footer left -->
         <!-- Footer center -->
         <div class="footer__center">
-            <div class="footer__center__controls white">
-                <i class="fas fa-random fa-lg"></i>
-                <i class="fas fa-step-backward fa-lg"></i>
-                <i class="far fa-play-circle fa-2x"></i>
-                <i class="fas fa-step-forward fa-lg"></i>
-                <i class="fas fa-undo-alt fa-lg"></i>
+            <div class="footer__center__controls">
+                <a href="#"><i class="fas fa-random fa-xs white"></i></a>
+                <a href="#"><i class="fas fa-step-backward fa-xs white"></i></a>
+                <a href="#"><i class="far fa-play-circle fa-2x white"></i></a>
+                <a href="#"><i class="fas fa-step-forward fa-xs white"></i></a>
+                <a href="#"><i class="fas fa-undo-alt fa-xs white"></i></a>
             </div>
             <div class="footer__center__progress">
-                <small>00:00</small>
-                <div class="progress__bar">
-                    <div class="progress__bar__played"></div>
-                </div>  
-                <small>00:00</small>
+                <p>0:25</p>
+                <span class="progress__bar">
+                    <div class="progress__bar__full">
+                        <div class="progress__bar__played"></div>
+                        <div class="progress__bar__cursor"></div>
+                    </div>
+                </span>  
+                <p>4:35</p>
             </div>
         </div>
         <!-- Footer /center -->
@@ -297,8 +300,11 @@
             <i class="fas fa-list"></i>
             <i class="fas fa-desktop"></i>
             <i class="fas fa-volume-off"></i>
-            <div class="footer__right__volume">
-                <div class="played"></div>
+            <div class="footer__right__sound">
+                <div class="sound__full">
+                    <div class="sound__active"></div>
+                    <div class="sound__cursor"></div>
+                </div>
             </div>
         </div>
         <!-- Footer /right -->

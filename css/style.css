@@ -274,7 +274,9 @@ aside a:hover, aside p:hover {
     height: auto;
 }
 .a--cover:hover .a--cover__overlay {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
     top: 0;
@@ -293,7 +295,7 @@ aside a:hover, aside p:hover {
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     font-size: 14px;
-    margin: 0 10px;
+    margin: 0 7px;
     transition: 0.1s ease-in-out;
 }
 .a--cover .fa-play:hover {

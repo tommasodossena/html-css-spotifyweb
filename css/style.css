@@ -65,6 +65,15 @@ hr {
 .btn--upgrade:hover {
     transform: scale(1.05);
 }
+.btn--learn_more {
+    padding: 8px 35px;
+    background: #1eb853;
+    border: none;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    margin-top: 14px;
+}
 
 /* MIX */
 .clearfix::after {
@@ -87,11 +96,14 @@ hr {
 .white {
     color: #fff;
 }
+.primary {
+    color: #1eb853;
+}
 
 /* STRUCTURE */
 body {
     height: 100vh;
-    background-color: #181717;
+    background-color: #2C2F34;
 }
 main {
     height: calc(100% - 75px);
@@ -99,7 +111,7 @@ main {
 }
 footer {
     height: 75px;
-    background-color: #282727;
+    background-color: #191C21;
 }
 
 /* MAIN  */
@@ -107,7 +119,7 @@ footer {
 aside {
     width: 225px;
     height: 100%;
-    background-color: #121111;
+    background-color: #26292E;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -116,12 +128,12 @@ aside {
 aside a {
     display: flex;
     align-items: center;
+    transition: 0.1s ease-in-out;
 }
 aside a, aside p {
     font-weight: 500;
-    transition: 0.1s ease-in-out;
 }
-aside a:hover, aside p:hover {
+aside a:hover {
     color: #fff;
 }
 .aside__top {
@@ -150,6 +162,9 @@ aside a:hover, aside p:hover {
     padding-left: 15px;
     border-left: 2px solid transparent;
 }
+.aside__new {
+    margin: 0 10px;
+}
 .aside__nav a:hover .aside__icon path {
     fill: #fff;
 }
@@ -161,6 +176,7 @@ aside a:hover, aside p:hover {
     height: 20px;
     width: 3px;
     background-color: #1eb853;
+    border-radius: 0px 5px 5px 0;
     left: 0;
     top: 0;
     transition: 0.2s ease;
@@ -183,6 +199,7 @@ aside a:hover, aside p:hover {
 .aside__playlist {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     overflow: hidden;
 }
 .aside__playlist button {
@@ -192,15 +209,17 @@ aside a:hover, aside p:hover {
     display: flex;
     align-items: center;
     padding: 10px 0;
+    transition: 0.1s ease-in-out;
+}
+.aside__playlist button:hover *{
+   color: #fff;
 }
 .aside__playlist ul {
-    display: block;
     overflow-y: auto;
     flex-basis: 400px;
-    width: 100%;
 }
 .aside__playlist li {
-    padding: 7px 0;
+    margin-bottom: 15px;
 }
 .aside__bottom i {
     margin-right: 5px;
@@ -235,7 +254,7 @@ aside a:hover, aside p:hover {
     top: 0;
     right: 0;
     z-index: 10;
-    background-color: rgb(8, 11, 19, 0.5);
+    background-color: rgb(38, 41, 46, 0.7);
 }
 
 /* library */
@@ -300,7 +319,7 @@ aside a:hover, aside p:hover {
 }
 .a--cover:hover .a--cover__overlay {
     display: inline-flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
@@ -314,13 +333,10 @@ aside a:hover, aside p:hover {
 }
 .a--cover .fa-play {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 13px 0;
-    padding-right: 12px;
-    padding-left: 14px;
+    padding: 13px 12px 12px 14px;
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    font-size: 10px;
-    margin: 0 6px;
+    font-size: 12px;
     transition: 0.1s ease-in-out;
 }
 .a--cover .fa-play:hover {
@@ -402,7 +418,7 @@ footer i:hover {
     color: rgba(255, 255, 255, 0.6);
     transition: 0.1s;
 }
-.footer__center__controls .fa-play-circle:hover{
+.footer__center__controls .fa-play-circle:hover {
     transform: scale(1.1);
 }
 .progress__bar {
@@ -462,6 +478,65 @@ footer i:hover {
     padding: 0 5px;
     color: #BDBEC0;
     transition: 0.2s ease-in-out;
+}
+.connect__device {
+    width: 200px;
+    height: 250px;
+    background: #3F4446;
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 55px;
+    right: 16px;
+    padding: 15px 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+}
+.connect__device::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: #3F4446;
+    width: 25px;
+    height: 5px;
+    border-radius: 0px 0px 5px 5px;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.connect__device__header *{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 3px;
+}
+.connect__device__main > img {
+    width: 135px;
+    opacity: 50%;
+    margin-top: 8px;
+}
+.connect__device__main li img {
+    width: 30px;
+}
+.connect__device__main li {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 12px;
+    line-height: 14px;
+}
+.device__main__detail {
+    font-size: 10px;
+    display: inline-block;
+    margin-left: 14px;
+    margin-right: 20px;
+    text-align: left;
+}
+.footer__right__misc a:nth-child(2):hover ~ .connect__device {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
 }
 .footer__right__sound {
     display: inline-block;

@@ -8,7 +8,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 ul, li {
     list-style: none;
@@ -16,26 +16,24 @@ ul, li {
 
 /* TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
 }
 h2 {
-    font-size: 20px;
+    font-size: 24px;
 }
 h3 {
     font-size: 12px;
-    color: #fff;
+    font-weight: 400;
 }
 h6 {
-    font-size: 11px;
-    color: #fff;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 400;
 }
 p, a {
     font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #6d6d6d;
+    font-weight: 300;
+    color: #BDBEC0;
 }
 a {
     text-decoration: none;
@@ -57,7 +55,8 @@ hr {
 .btn--upgrade {
     display: inline-block;
     padding: 10px 25px;
-    font-size: 0.7em;
+    font-size: 10px;
+    font-weight: 600;
     color: #fff;
     background-color: transparent;
     transition: 0.2s ease-in-out;
@@ -120,7 +119,7 @@ aside a {
 }
 aside a, aside p {
     font-weight: 500;
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 aside a:hover, aside p:hover {
     color: #fff;
@@ -143,19 +142,40 @@ aside a:hover, aside p:hover {
 .aside__icon {
     margin-right: 10px;
 }
+.aside__nav {
+    position: relative;
+}
 .aside__nav li {
-    padding-bottom: 10px;
+    margin-bottom: 15px;
     padding-left: 15px;
     border-left: 2px solid transparent;
 }
-.aside__nav li:first-child {
-    border-left: 2px solid #1eb853;
-}
-.aside__nav a:hover .aside__icon path{
+.aside__nav a:hover .aside__icon path {
     fill: #fff;
 }
 .aside__nav a:hover p {
     color: #fff;
+}
+.aside__nav__line {
+    position: absolute;
+    height: 20px;
+    width: 3px;
+    background-color: #1eb853;
+    left: 0;
+    top: 0;
+    transition: 0.2s ease;
+}
+.aside__nav li:nth-child(2):active ~ .aside__nav__line {
+    top: 35px;
+}
+.aside__nav li:nth-child(3):active ~ .aside__nav__line {
+    top: 70px;
+}
+.aside__nav li:nth-child(4):active ~ .aside__nav__line {
+    top: 105px;
+}
+.aside__nav li:nth-child(5):active ~ .aside__nav__line {
+    top: 140px;
 }
 .aside__playlist, .aside__bottom {
     padding: 10px 15px;
@@ -168,7 +188,7 @@ aside a:hover, aside p:hover {
 .aside__playlist button {
     background-color: transparent;
     border: none;
-    color: #6d6d6d;
+    color: #BDBEC0;
     display: flex;
     align-items: center;
     padding: 10px 0;
@@ -180,13 +200,17 @@ aside a:hover, aside p:hover {
     width: 100%;
 }
 .aside__playlist li {
-    padding: 10px 0;
+    padding: 7px 0;
 }
 .aside__bottom i {
     margin-right: 5px;
 }
 .aside__bottom hr {
     margin: 10px 0;
+}
+.aside__bottom img {
+    width: 35px;
+    height: 35px;
 }
 .user__icon {
     border-radius: 50%;
@@ -272,6 +296,7 @@ aside a:hover, aside p:hover {
 .a--cover img {
     width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 .a--cover:hover .a--cover__overlay {
     display: inline-flex;
@@ -294,8 +319,8 @@ aside a:hover, aside p:hover {
     padding-left: 14px;
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    font-size: 14px;
-    margin: 0 7px;
+    font-size: 10px;
+    margin: 0 6px;
     transition: 0.1s ease-in-out;
 }
 .a--cover .fa-play:hover {
@@ -308,10 +333,6 @@ aside a:hover, aside p:hover {
     font-weight: 700;
     text-align: center;
     margin: 5px 0;
-}
-.p--subtitle {
-    font-size: 10px;
-    font-weight: 600;
 }
 #library__artist .a--cover {
     border-radius: 50%;
@@ -357,7 +378,7 @@ footer i:hover {
 }
 .footer__left__buttons i {
     padding: 5px;
-    color: #6d6d6d;
+    color: #BDBEC0;
     transition: 0.2s ease-in-out;
 }
 .footer__left__buttons i:hover {
@@ -439,7 +460,7 @@ footer i:hover {
 }
 .footer__right__misc i {
     padding: 0 5px;
-    color: #6d6d6d;
+    color: #BDBEC0;
     transition: 0.2s ease-in-out;
 }
 .footer__right__sound {
@@ -528,15 +549,15 @@ footer i:hover {
     }
     .footer__right__misc i {
         font-size: 10px;
-        color: #6d6d6d;
+        color: #BDBEC0;
         padding: 0 2px;
         transition: 0.2s ease-in-out;
     }
     .footer__right__sound {
         width: 50px;
     }
-
 }
+
 @media screen and (max-width: 300px) {
     .footer__center__controls i {
         margin: 0 1px;

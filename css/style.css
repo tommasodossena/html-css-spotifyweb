@@ -217,6 +217,7 @@ aside a:hover {
 .aside__playlist ul {
     overflow-y: auto;
     flex-basis: 400px;
+    width: 100%;
 }
 .aside__playlist li {
     margin-bottom: 15px;

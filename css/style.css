@@ -13,6 +13,9 @@ body {
 ul, li {
     list-style: none;
 }
+button:focus, button:active:focus {
+    outline: none;
+}
 
 /* TYPOGRAPHY */
 h1, h2, h3, h4, h5, h6 {
@@ -72,7 +75,6 @@ hr {
     border-radius: 6px;
     font-size: 10px;
     font-weight: 600;
-    margin-top: 14px;
 }
 
 /* MIX */
@@ -331,6 +333,7 @@ aside a:hover {
 }
 .a--cover .fa-heart, .a--cover .fa-ellipsis-h {
     font-size: 14px;
+    flex-shrink: 0;
 }
 .a--cover .fa-play {
     background-color: rgba(0, 0, 0, 0.6);
@@ -339,6 +342,7 @@ aside a:hover {
     border-radius: 50%;
     font-size: 12px;
     transition: 0.1s ease-in-out;
+    flex-shrink: 1;
 }
 .a--cover .fa-play:hover {
     border: 1px solid rgba(255, 255, 255);
@@ -348,8 +352,7 @@ aside a:hover {
     display: block;
     color: #fff;
     font-weight: 700;
-    text-align: center;
-    margin: 5px 0;
+    margin: 10px 0 2px;
 }
 #library__artist .a--cover {
     border-radius: 50%;
@@ -476,9 +479,23 @@ footer i:hover {
     display: inline-block;
 }
 .footer__right__misc i {
-    padding: 0 5px;
+    padding: 0 7px;
     color: #BDBEC0;
     transition: 0.2s ease-in-out;
+}
+.footer__right__misc .fa-desktop {
+    position: relative;
+}
+.footer__right__misc .fa-desktop:after{
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 1px;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #191C21;
+    border-radius: 50%;
+    background: #f90aa5;
 }
 .connect__device {
     width: 200px;
@@ -488,7 +505,7 @@ footer i:hover {
     text-align: center;
     position: fixed;
     bottom: 55px;
-    right: 16px;
+    right: 22px;
     padding: 15px 5px;
     visibility: hidden;
     opacity: 0;
@@ -507,32 +524,38 @@ footer i:hover {
     left: 50%;
     transform: translate(-50%, 0);
 }
-.connect__device__header *{
-    display: inline-block;
-    vertical-align: middle;
+.connect__device__header {
     padding: 0 3px;
 }
+.connect__device__header * {
+    display: inline-block;
+    vertical-align: middle;
+}
 .connect__device__main > img {
-    width: 135px;
+    width: 125px;
     opacity: 50%;
-    margin-top: 8px;
+    margin: 8px 0;
 }
 .connect__device__main li img {
     width: 30px;
+    vertical-align: middle;
 }
 .connect__device__main li {
     display: flex;
     align-items: center;
     margin-left: 15px;
-    margin-top: 12px;
-    line-height: 14px;
+    margin-bottom: 13px;
 }
 .device__main__detail {
     font-size: 10px;
     display: inline-block;
     margin-left: 14px;
-    margin-right: 20px;
+    margin-right: 17px;
     text-align: left;
+    vertical-align: middle;
+}
+.connect__device__equaliser {
+    transform: scale(0.4);
 }
 .footer__right__misc a:nth-child(2):hover ~ .connect__device {
     display: inline-block;

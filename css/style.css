@@ -408,11 +408,11 @@ footer i:hover {
     flex-basis: 50%;
     flex-grow: 2;
     text-align: center;
-    padding-bottom: 7px;
+    display: inline-flex;
+    flex-wrap: wrap;
 }
-.footer__center__controls {
-    width: 100%;
-    line-height: 26px;
+.footer__center__controls, .footer__center__progress {
+    flex-basis: 100%;
     text-align: center;
     margin-bottom: 5px;
 }
@@ -473,15 +473,16 @@ footer i:hover {
 }
 .footer__right {
     flex-basis: 25%;
-    text-align: right;
+    display: inline-flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
-.footer__right__misc {
-    display: inline-block;
-}
-.footer__right__misc i {
-    padding: 0 7px;
+.footer__right i {
     color: #BDBEC0;
     transition: 0.2s ease-in-out;
+}
+.footer__right__misc i {
+    margin-right: 20px;
 }
 .footer__right__misc .fa-desktop {
     position: relative;
@@ -490,9 +491,9 @@ footer i:hover {
     content: "";
     position: absolute;
     top: -4px;
-    right: 1px;
-    width: 6px;
-    height: 6px;
+    right: -4px;
+    width: 5px;
+    height: 5px;
     border: 2px solid #191C21;
     border-radius: 50%;
     background: #f90aa5;
@@ -505,7 +506,7 @@ footer i:hover {
     text-align: center;
     position: fixed;
     bottom: 55px;
-    right: 22px;
+    right: 30px;
     padding: 15px 5px;
     visibility: hidden;
     opacity: 0;
@@ -530,6 +531,7 @@ footer i:hover {
 .connect__device__header * {
     display: inline-block;
     vertical-align: middle;
+    margin-right: 5px;
 }
 .connect__device__main > img {
     width: 125px;
@@ -568,6 +570,7 @@ footer i:hover {
     width: 65px;
     position: relative;
     cursor: pointer;
+    margin: 0 5px
 }
 .sound__full {
     width: 100%;
@@ -634,7 +637,7 @@ footer i:hover {
         flex-basis: calc((100% / 2) - 5px);
     }
     footer {
-        padding: 0 5px;
+        position: relative;
     }
     .footer__left__track {
         margin-right: 5px;
@@ -643,17 +646,35 @@ footer i:hover {
         margin-right: 10px;
         width: 30px;
     }
+    .footer__center__progress {
+        order: -1;
+    }
     .progress__bar {
-        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
-    .footer__right__misc i {
-        font-size: 10px;
-        color: #BDBEC0;
-        padding: 0 2px;
-        transition: 0.2s ease-in-out;
+    .footer__center__progress small {
+        display: none;
     }
-    .footer__right__sound {
-        width: 50px;
+    .footer__center__controls a:not(:nth-child(3)) {
+        display: none;
+    }
+    .footer__center__controls .fa-play-circle {
+        position: absolute;
+        right: 15px;
+        bottom: 20px;
+    }
+    .footer__right__misc .fa-list, .footer__right__volume {
+        display: none;
+    }
+    .footer__right__misc .fa-desktop {
+        position: absolute;
+        right: 50px;
+    }
+    .footer__right__misc a:nth-child(2):hover ~ .connect__device {
+        display: none;
     }
 }
 

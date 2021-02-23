@@ -418,11 +418,11 @@ footer i:hover {
 }
 .footer__center__controls i {
     vertical-align: middle;
-    margin: 0 5px;
+    margin: 0 10px;
     color: rgba(255, 255, 255, 0.6);
     transition: 0.1s;
 }
-.footer__center__controls .fa-play-circle:hover {
+.footer__center__controls .fa-play:hover {
     transform: scale(1.1);
 }
 .progress__bar {
@@ -480,6 +480,9 @@ footer i:hover {
 .footer__right i {
     color: #BDBEC0;
     transition: 0.2s ease-in-out;
+}
+.footer__right__misc > a {
+    display: inline-block;
 }
 .footer__right__misc i {
     margin-right: 20px;
@@ -661,25 +664,31 @@ footer i:hover {
     .footer__center__controls a:not(:nth-child(3)) {
         display: none;
     }
-    .footer__center__controls .fa-play-circle {
+    .footer__center__controls .fa-play {
         position: absolute;
-        right: 15px;
-        bottom: 20px;
+        right: 25px;
+        bottom: 28px;
+        font-size: 20px;
     }
     .footer__right__misc .fa-list, .footer__right__volume {
         display: none;
     }
     .footer__right__misc .fa-desktop {
         position: absolute;
-        right: 50px;
+        right: 70px;
+        bottom: 24px;
+        font-size: 20px;
     }
     .footer__right__misc a:nth-child(2):hover ~ .connect__device {
         display: none;
     }
 }
 
-@media screen and (max-width: 300px) {
-    .footer__center__controls i {
-        margin: 0 1px;
+@media screen and (max-height: 812px) {
+    #upgrade {
+        display: none;
+    }
+    #library {
+        margin-top: 10px;
     }
 }

@@ -207,11 +207,21 @@ aside a:hover {
 .aside__playlist button {
     background-color: transparent;
     border: none;
-    color: #BDBEC0;
     display: flex;
     align-items: center;
-    padding: 10px 0;
     transition: 0.1s ease-in-out;
+    margin-left: 1px;
+    margin: 20px 0 20px 1px;
+}
+.aside__playlist button i {
+    background: transparent;
+    padding: 9px 9px 9px 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    transition: 0.1s ease-in-out;
+    margin-right: 12px;
 }
 .aside__playlist button:hover *{
    color: #fff;
@@ -222,7 +232,40 @@ aside a:hover {
     width: 100%;
 }
 .aside__playlist li {
-    margin-bottom: 15px;
+    margin: 5px 1px 15px;
+    margin-bottom: 20px;
+}
+.aside__playlist li * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.aside__playlist .fa-play {
+    background: transparent;
+    padding: 8px 8px 8px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    font-size: 10px;
+    transition: 0.1s ease-in-out;
+    margin-right: 10px;
+}
+.aside__playlist li:nth-child(2) i {
+    background: transparent;
+    padding: 9px 9px 8px 10px;
+    border: 1px solid #1eb853;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    transition: 0.1s ease-in-out;
+    margin-right: 10px;
+}
+.aside__playlist li:not(:nth-child(2)):hover i {
+    border: 1px solid #fff);
+    transform: scale(1.1);
+    color: #fff;
+}
+.aside__playlist li:hover a {
+    color: #fff;
 }
 .aside__bottom i {
     margin-right: 5px;
@@ -273,7 +316,7 @@ aside a:hover {
     margin-bottom: 10px;
 }
 #library__category li {
-    margin: 0px 8px 24px;
+    margin: 0px 10px 20px;
 }
 #library__category a {
     font-size: 11px;
@@ -281,18 +324,27 @@ aside a:hover {
     position: relative;
     transition: 0.2s ease-in-out;
 }
-#library__category a.active::before {
+#library__category a.white {
+    border-bottom: 2px solid #1eb853;
+    padding-bottom: 3px;
+}
+#library__category a:not([class="white"]):before {
+    display: none;
     content: "";
     position: absolute;
     bottom: -5px;
     right: 50%;
     transform: translate(50%, 0);
-    height: 1px;
+    height: 2px;
     width: 20px;
-    border-bottom: 2px solid #1eb853;
+    background-color: #1eb853;
+    transition: 0.2s ease-in-out;
 }
-#library__category a:hover {
+#library__category li:hover a{
     color: #fff;
+}
+#library__category li:hover a::before{
+    display: inline-block;
 }
 .library__section {
     max-width: 941px;
@@ -440,7 +492,7 @@ footer i:hover {
     overflow: hidden;
 }
 .progress__bar__played {
-    width: 20%;
+    width: 40%;
     height: 3px;
     position: absolute;
     left: 0;
@@ -452,7 +504,7 @@ footer i:hover {
     width: 10px;
     border-radius: 50%;
     position: absolute;
-    left: 19%;
+    left: 39%;
     bottom: -3px;
     background-color: #fff;
     vertical-align: middle;
@@ -620,6 +672,35 @@ footer i:hover {
     aside {
         width: 65px;
     }
+    .aside__nav svg {
+        height: 28px;
+        width: 28px;
+    }
+    .aside__nav li {
+        margin-bottom: 35px;
+    }
+    .aside__nav__line {
+        position: absolute;
+        height: 30px;
+        width: 3px;
+        background-color: #1eb853;
+        border-radius: 0px 5px 5px 0;
+        left: 0;
+        top: 0;
+        transition: 0.2s ease;
+    }
+    .aside__nav li:nth-child(2):active ~ .aside__nav__line {
+        top: 62px;
+    }
+    .aside__nav li:nth-child(3):active ~ .aside__nav__line {
+        top: 125px;
+    }
+    .aside__nav li:nth-child(4):active ~ .aside__nav__line {
+        top: 188px;
+    }
+    .aside__nav li:nth-child(5):active ~ .aside__nav__line {
+        top: 251px;
+    }
     #main__container {
         width: calc(100% - 65px);
     }
@@ -641,13 +722,15 @@ footer i:hover {
     }
     footer {
         position: relative;
-    }
-    .footer__left__track {
-        margin-right: 5px;
+        padding: 0;
     }
     .footer__left__track img{
         margin-right: 10px;
-        width: 30px;
+        height: 75px;
+        width: 75px;
+    }
+    .footer__left__track__info, .footer__left__buttons {
+        display: none;
     }
     .footer__center__progress {
         order: -1;
@@ -678,6 +761,9 @@ footer i:hover {
         right: 70px;
         bottom: 24px;
         font-size: 20px;
+    }
+    .footer__right__misc .fa-desktop:after {
+        display: none;
     }
     .footer__right__misc a:nth-child(2):hover ~ .connect__device {
         display: none;

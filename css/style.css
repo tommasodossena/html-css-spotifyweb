@@ -184,16 +184,16 @@ aside a:hover {
     top: 0;
     transition: 0.2s ease;
 }
-.aside__nav li:nth-child(2):active ~ .aside__nav__line {
+.aside__nav li:nth-child(2):active ~ li .aside__nav__line {
     top: 35px;
 }
-.aside__nav li:nth-child(3):active ~ .aside__nav__line {
+.aside__nav li:nth-child(3):active ~ li .aside__nav__line {
     top: 70px;
 }
-.aside__nav li:nth-child(4):active ~ .aside__nav__line {
+.aside__nav li:nth-child(4):active ~ li .aside__nav__line {
     top: 105px;
 }
-.aside__nav li:nth-child(5):active ~ .aside__nav__line {
+.aside__nav li:nth-child(5):active ~ li .aside__nav__line {
     top: 140px;
 }
 .aside__playlist, .aside__bottom {

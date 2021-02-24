@@ -729,17 +729,17 @@ footer i:hover {
         top: 0;
         transition: 0.2s ease;
     }
-    .aside__nav li:nth-child(2):active ~ .aside__nav__line {
-        top: 62px;
+    .aside__nav li:nth-child(2):active ~ li .aside__nav__line {
+        top: 61px;
     }
-    .aside__nav li:nth-child(3):active ~ .aside__nav__line {
-        top: 125px;
+    .aside__nav li:nth-child(3):active ~ li .aside__nav__line {
+        top: 124px;
     }
-    .aside__nav li:nth-child(4):active ~ .aside__nav__line {
-        top: 188px;
+    .aside__nav li:nth-child(4):active ~ li .aside__nav__line {
+        top: 189px;
     }
-    .aside__nav li:nth-child(5):active ~ .aside__nav__line {
-        top: 251px;
+    .aside__nav li:nth-child(5):active ~ li .aside__nav__line {
+        top: 250px;
     }
     .aside__bottom i {
         display: none;

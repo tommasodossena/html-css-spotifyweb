@@ -699,6 +699,15 @@ footer i:hover {
     }
 }
 
+@media screen and (max-width: 642px) {
+    .footer__right__misc .fa-desktop:after {
+        display: none;
+    }
+    .footer__right__misc a:nth-child(2):hover ~ .connect__device {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 576px) {
     aside {
         width: 65px;
@@ -798,12 +807,6 @@ footer i:hover {
         right: 70px;
         bottom: 24px;
         font-size: 15px;
-    }
-    .footer__right__misc .fa-desktop:after {
-        display: none;
-    }
-    .footer__right__misc a:nth-child(2):hover ~ .connect__device {
-        display: none;
     }
 }
 

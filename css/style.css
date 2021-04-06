@@ -102,6 +102,12 @@ hr {
 .primary {
     color: #1eb853;
 }
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.16);
+}
 
 /* STRUCTURE */
 body {
@@ -593,7 +599,7 @@ footer i:hover {
     position: fixed;
     bottom: 55px;
     right: 30px;
-    padding: 15px 5px;
+    padding: 10px 5px;
     visibility: hidden;
     opacity: 0;
     transition: all 0.1s ease-in-out;
